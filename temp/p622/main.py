@@ -1,4 +1,5 @@
 import numpy as np
+#import matplotlib.pyplot as plt
 
 def riffle_shuffle(deck, n):
     print('Riffle-shuffling on:')
@@ -40,10 +41,25 @@ def s(n):
     return count
 
 if __name__ == '__main__':
-    n = 86 # n is an even integer
+    #n = 86 # n is an even integer
 
-    deck = np.arange(1, n + 1)
+    '''deck = np.arange(1, n + 1)
     for i in range(8):
-        deck = riffle_shuffle(deck, n)
+        deck = riffle_shuffle(deck, n)'''
 
     #print(s(n))
+
+    xs = []
+    ys = []
+    for i in range(2, 131, 2):
+        xs.append(i)
+        ys.append(s(i))
+        print(f'{xs[-1]}: {ys[-1]}')
+
+    #plt.plot(xs, ys)
+    #plt.show()
+
+    xs = np.array(xs)
+    ys = np.array(ys)
+
+    print(xs[ys == 60])
