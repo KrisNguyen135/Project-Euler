@@ -85,6 +85,6 @@ for sorted_prime in sorted_primes:
 
 ```
 
-## Conclusions
+## Conclusion
 
 I had a lot of fun with this problem. The strategy of forming the valid sets was quite interesting to work out. This problem also had me look at the source code for the `itertools.permutations` method of Python.
