@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcbae5b3-fefe-4645-acc9-d88a2f8f4823" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/temp/p151/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/p435/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/p435/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,14 +12,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp/p234/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+            <state relative-caret-position="355">
+              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -30,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/temp/p234/test_primes.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -53,6 +60,7 @@
         <option value="$PROJECT_DIR$/temp/helper.py" />
         <option value="$PROJECT_DIR$/temp/p234/test_primes.txt" />
         <option value="$PROJECT_DIR$/temp/p234/main.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -74,17 +82,6 @@
             <path>
               <item name="ProjectEuler" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjectEuler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectEuler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectEuler" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectEuler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectEuler" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
-              <item name="p234" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectEuler" type="b2602c69:ProjectViewProjectNode" />
@@ -183,8 +180,8 @@
     <frame x="0" y="23" width="1440" height="798" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50666666" visible="true" weight="0.26108727" />
-      <window_info active="true" id="Run" order="1" sideWeight="0.49333334" side_tool="true" visible="true" weight="0.26108727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50666666" visible="true" weight="0.26108727" />
+      <window_info id="Run" order="1" sideWeight="0.49333334" side_tool="true" visible="true" weight="0.26108727" />
       <window_info id="Structure" order="2" sideWeight="0.5022727" side_tool="true" weight="0.25751072" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -244,17 +241,24 @@
     <entry file="file://$PROJECT_DIR$/temp/p234/test_primes.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/temp/p234/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+        <state relative-caret-position="355">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
