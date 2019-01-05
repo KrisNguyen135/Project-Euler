@@ -38,7 +38,6 @@ def solve(limit, prime_input='primes.txt'):
         divisible_sum = p * (refactored_upper * (refactored_upper + 1)
                         - refactored_lower * (refactored_lower + 1)) // 2
 
-        #print(f'{lower}-{upper}|{p}:{divisible_sum}')
         return divisible_sum
 
 
