@@ -21,20 +21,26 @@ def generate_primes_under(limit, output='primes.txt'):
                 f.write(str(i) + '\n')
 
 
-def generate_semidivisibles(prime_input='primes.txt'):
+def solve(limit, prime_input='primes.txt'):
     global running_sum
 
-    def n_divisibles(lower, upper, p):
-        '''real_lower = lower // p * p
-        real_upper = upper // p * p
-
-        return (real_upper - real_lower) / p'''
+    def sum_divisibles(lower, upper, p):
+        if lower >= limit:
+            return 0
 
         refactored_lower = lower // p
+
+        if upper > limit:
+            upper = limit
+
         refactored_upper = upper // p if upper % p else (upper - 1) // p
 
-        print(f'{lower}-{upper}-{p}:{refactored_upper - refactored_lower}')
-        return refactored_upper - refactored_lower
+        divisible_sum = p * (refactored_upper * (refactored_upper + 1)
+                        - refactored_lower * (refactored_lower + 1)) // 2
+
+        #print(f'{lower}-{upper}|{p}:{divisible_sum}')
+        return divisible_sum
+
 
     def thread_worker():
         global running_sum
@@ -48,14 +54,15 @@ def generate_semidivisibles(prime_input='primes.txt'):
             p1_squared = p1 ** 2
             p2_squared = p2 ** 2
 
-            n_p1_divisibles = n_divisibles(p1_squared, p2_squared, p1)
-            n_p2_divisibles = n_divisibles(p1_squared, p2_squared, p2)
-            n_p1_p2_divisibles = n_divisibles(p1_squared, p2_squared, p1 * p2)
-            n_semindivisibles = n_p1_divisibles + n_p2_divisibles\
-                                - 2 * n_p1_p2_divisibles
+            p1_divisible_sum = sum_divisibles(p1_squared, p2_squared, p1)
+            p2_divisible_sum = sum_divisibles(p1_squared, p2_squared, p2)
+            p1_p2_divisible_sum = sum_divisibles(
+                p1_squared, p2_squared, p1 * p2
+            )
+            semidivisible_sum = p1_divisible_sum + p2_divisible_sum\
+                                - 2 * p1_p2_divisible_sum
 
-            print(f'{n_semindivisibles} semidivisibles between {p1} and {p2}')
-            running_sum += n_semindivisibles
+            running_sum += semidivisible_sum
 
             task_queue.task_done()
 
@@ -92,11 +99,20 @@ def generate_semidivisibles(prime_input='primes.txt'):
 if __name__ == '__main__':
     running_sum = 0
 
-    # test execution
-    upper_limit = 15
-    #generate_primes_under(int(sqrt(upper_limit)) + 1, output='test_primes.txt')
-    generate_semidivisibles(prime_input='test_primes.txt')
+    # test 1
+    '''upper_limit = 15
+    prime_limit = 6
+    generate_primes_under(prime_limit, output='test_primes.txt')
+    solve(upper_limit, prime_input='test_primes.txt')'''
+
+    # test 2
+    '''upper_limit = 1001
+    prime_limit = 38
+    generate_primes_under(prime_limit, output='test_primes.txt')
+    solve(upper_limit, prime_input='test_primes.txt')'''
 
     # real execution
-    '''upper_limit = 999966663333
-    generate_primes_under(int(sqrt(upper_limit)) + 1)'''
+    upper_limit = 999966663334
+    prime_limit = 1000004
+    generate_primes_under(prime_limit)
+    solve(upper_limit)
